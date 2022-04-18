@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Jordan Store</title>
+  </head>
+  <body>
+    <header>
+      <section class="header01">
+        <p id="desconto">Descontos de até 90% para alunos da BlueEdTech!!!</p>
+        <h1>Jordan Store</h1>
+      </section>
+      <section class="header02">
+        <div id="fraseEfeito">
+          Os mais exclusivos Jordan's você só encontra aqui
+        </div>
+        <div id="descricaoHeader">
+          Nunca nenhum tênis teve tanta repercussão e venda quanto o tênis Nike
+          Air Jordan, criado para o lendário jogador de basquete Michael Jordan.
+        </div>
+      </section>
+    </header>
+
+    <secttion id="busca">
+      <div id="jordanEscolhido">
+        <h3>Pesquisar Jordan</h3>
+        <div>
+          <input
+            type="number"
+            id="idJordan"
+            placeholder="Digite o ID do Jordan"
+          />
+          <button id="idJordanButton" onclick="findByIdJordan()">BUSCAR</button>
+        </div>
+      </div>
+      <div class="btnCadastrar">
+        <h3>Cadatrar novo Jordan</h3>
+        <button type="button" class="btnCadastro" onclick="abrirModal()">
+          Iniciar Cadastro
+        </button>
+      </div>
+    </secttion>
+    <!-- .Modal editar/cadastar. -->
+    <section class="modal-overlay" id="overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="titleModal">Cadastrar Novo Jordan</h2>
+          <a onclick="fecharModal()" class="close-modal">x</a>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="id" />
+          <input type="text" name="modelo" id="modelo" placeholder="Modelo" />
+          <input type="number" name="preco" id="preco" placeholder="Preço" />
+          <textarea
+            type="text"
+            name="descricao"
+            id="descricao"
+            placeholder="Descrição"
+            rows="5"
+          ></textarea>
+          <input
+            type="text"
+            name="foto"
+            id="foto"
+            placeholder="Link da imagem do Jordan"
+          />
+          <button id="btnModal" onclick="createJordan()">Cadastrar</button>
+        </div>
+      </div>
+    </section>
+    <!-- .Modal excluir -->
+    <section class="modal-overlay" id="overlayDelete">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="titleModal2">Confirmação</h2>
+        </div>
+        <div class="modal-body">
+          <p>Deseja excluir o Jordan permanentemente?</p>
+          <div class="botoesDelEdit">
+            <button id="btnConfirmar">Confirmar</button>
+            <button id="btnVoltar" onclick="fecharModalDelete()">
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="resultadoBusca">
+      <!-- lista do tenis escolhido vindo do script.js entrará aqui -->
+    </div>
+    <main>
+      <section id="main01">
+        <h2>Jordan's do momento:</h2>
+        <p>Frete grátis para os tenis acima de R$: 1999.90. Aproveite!</p>
+      </section>
+
+      <section id="main02">
+        <!-- lista de tenis do script.js entrará aqui -->
+      </section>
+    </main>
+    <footer>
+      <p>
+        Confira mais projetos -
+        <a href="https://github.com/thulerjoao">github.com/thulerjoao </a>
+        - 2022
+      </p>
+    </footer>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
