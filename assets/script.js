@@ -107,11 +107,6 @@ async function submitJordan() {
     body: JSON.stringify(jordan),
   });
   const newJordan = await responde.json();
-  
-  // localStorage.setItem('message', "Digite um ID Válido para Pesquisar");
-  //   localStorage.setItem('type', "fail")
-  //   msgAlert.innerText = localStorage.getItem("message");
-  //   msgAlert.classList.add(localStorage.getItem("type"));
 
   if(newJordan.message != undefined){
     localStorage.setItem("message", newJordan.message);
