@@ -24,13 +24,19 @@
         </div>
       </section>
     </header>
-
+    
+    <!-- modal de mensagens de alerta -->
+    <section id="messages">
+      <span class="msg-alert"></span>
+    </section>
+    
     <secttion id="busca">
+      
       <div id="jordanEscolhido">
         <h3>Pesquisar Jordan</h3>
         <div>
           <input
-            type="number"
+            type="text"
             id="idJordan"
             placeholder="Digite o ID do Jordan"
           />
@@ -68,7 +74,7 @@
             id="foto"
             placeholder="Link da imagem do Jordan"
           />
-          <button id="btnModal" onclick="createJordan()">Cadastrar</button>
+          <button id="btnModal" onclick="submitJordan()">Cadastrar</button>
         </div>
       </div>
     </section>
