@@ -1,6 +1,7 @@
 // const response = await fetch(`${baseURL}/all-jordans`);
 
-const baseUrl = 'http://localhost:3000/jordans';
+// const baseUrl = 'http://localhost:3000/jordans';
+const baseUrl = 'http://192.168.1.66:3000/jordans';
 const msgAlert = document.querySelector(".msg-alert")
 
 async function findAllJordans() {
@@ -11,7 +12,9 @@ async function findAllJordans() {
     document.getElementById('main02').insertAdjacentHTML(
       'beforeend',
       `<div class="card" id="JordanListaItem${element._id}">
+        <div id="cards-img">
           <img src="${element.foto}" alt="imagem do produto">
+        </div>  
           <p class="modelo">${element.modelo}</p>
           <p class="descricao">${element.descricao}</p>
           <p class="preco">R$ ${element.preco.toFixed(2)}</p>
