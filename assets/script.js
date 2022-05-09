@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/jordans';
+const baseUrl = 'https://api-jordanstore-blue.onrender.com/jordans';
 
 const msgAlert = document.querySelector(".msg-alert");
 
